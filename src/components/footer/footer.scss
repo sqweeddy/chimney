@@ -1,0 +1,121 @@
+.footer {
+  padding-top: 89px;
+  padding-bottom: 80px;
+  background-color: $colorUltraDarkAqua;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__block {
+    width: 30%;
+  }
+
+  &__title {
+    margin-bottom: 19px;
+    font-size: 22px;
+    font-weight: 700;
+    color: $colorWhite;
+  }
+
+  &__list {
+    column-count: 2;
+    column-gap: 50px;
+  }
+
+  &__item {
+    margin-bottom: 20px;
+    font-size: 14px;
+  }
+
+  &__link {
+    color: $colorWhite;
+    transition: color .3s ease-out;
+
+    &:hover {
+      color: $colorAqua;
+    }
+  }
+
+  .contacts {
+    width: 25%;
+
+    &__time, &__address {
+      padding-left: 20px;
+      background: no-repeat left center;
+    }
+
+    &__time {
+      margin-bottom: 16px;
+      background-image: url('/assets/images/clock.png');
+      font-size: 14px;
+      color: $colorWhite;
+    }
+
+    &__days {
+      color: $colorAqua;
+    }
+
+    &__address {
+      margin-bottom: 32px;
+      background-image: url('/assets/images/pin.png');
+      font-size: 14px;
+      color: $colorWhite;
+      font-style: normal;
+    }
+    
+    .socials {
+      &__icon {          
+        transition: color .3s ease-in-out;
+    
+        &:hover {
+          color: $colorWhite;
+        } 
+      }
+    }
+
+    .socials__item:not(:last-child) {
+      margin-right: 41px;
+  }
+  }
+}
+
+
+@media (max-width: 1115px) {
+  .footer {
+    padding-top: 26px;
+    padding-bottom: 20px;
+
+    &__block:not(:last-child) {
+      display: none;
+    }
+
+    &__title {
+      display: none;
+    }
+
+    &__wrapper {
+      
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .contacts {
+      width: unset;
+      &__time, &__address {
+        display: none;
+      }
+
+      .socials {
+        justify-content: space-between;
+        width: 203px;
+      }
+
+      .socials__item:not(:last-child) {
+        margin-right: 0;
+      }
+    }
+  }
+}

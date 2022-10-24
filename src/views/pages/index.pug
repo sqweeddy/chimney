@@ -1,0 +1,145 @@
+extends ../layouts/default
+
+block variables
+
+block main
+  section.hero
+    .container
+      h1.hero__title Монтаж дымоходов
+      .map
+        .map__root Главная
+        svg.map__icon
+          use(xlink:href='/assets/images/sprite.svg#vector')
+        .map__current Монтаж дымоходов
+      .hero__descr
+        | В 
+        span.hero__accent Дымоход.ру  
+        | вам помогут как приобрести, так и установить дымоход любой конфигурации. В нашем монтажном отделе, состоящим из трёх бригад работают квалифицированные специалисты, которые ежегодно проходят курсы повышения квалификации. Все работы проводим качественно и аккуратно, в короткий срок и на совесть .
+      .main-content 
+        .main-content__text 
+          h2.title Lorem ipsum dolor sit amet
+          h2.title-big LOREM IPSUM
+          ul.main-list 
+            li.main-list__item Доступные цены
+            li.main-list__item Собственное производство Дымоходов
+            li.main-list__item Выполнение необходимых работ, связанных с установкой камина, печи, котла
+            li.main-list__item Гарантия (от трех до десяти лет)
+            li.main-list__item Работаем чисто, аккуратно, убираем за собой, не сквернословим
+            li.main-list__item Только русские квалифицированные специалисты
+            li.main-list__item Устанавливаем любые дымоходы всех производителей
+        .main-content__img
+          img(src="/assets/images/hero.png", alt="hero image", srcset="").hero-img
+  section.process 
+    .container 
+      .divider 
+      h2.title.mobile-title Процесс выполнения монтажа
+      ul.process__list 
+        li.process__item
+          .process__item-counter 1
+          p.process__item-text Рассчёт предварительной заявки
+        li.process__item
+          .process__item-counter 2
+          p.process__item-text Замер объекта нашим инженером
+        li.process__item
+          .process__item-counter 3
+          p.process__item-text Составление Коммерческого предложения по изделиям дымохода и окончательной сметы на  работы 
+        li.process__item
+          .process__item-counter 4
+          p.process__item-text Изготовление Дымохода, покраска (если требуется)
+        li.process__item
+          .process__item-counter 5
+          p.process__item-text Монтаж продукции, проверка и наладкапробный запуск системы и последующая эксплуатация
+        li.process__item
+          .process__item-counter 6
+          p.process__item-text Гарантийное обслуживание по соответствующем сроку
+  section.why
+    .container 
+      .divider 
+      h2.title.mobile-title Почему Дымоход.ру?
+      p.why__descr В отличие от других производителей, мы ручаемся за качество продукции, т.к. все Дымоходы изготавливаются из качественной стали, проверенного теплоизолятора, по современной технологии плазменной сварки «встык»
+      ul.cards 
+        li.cards__item
+          svg.cards__img
+            use(xlink:href='/assets/images/sprite.svg#guarantee') 
+          h3.cards__title Большой гарантийный срок
+          p.cards__text 
+            | Крепеж, стыковка элементов - 
+            span.cards__accent  10&nbsp;лет 
+          p.cards__text 
+            | Сквозная коррозия труб - 
+            span.cards__accent  5 лет 
+          p.cards__text 
+            | Гидроизоляция - 
+            span.cards__accent  3 года 
+        li.cards__item
+          svg.cards__img
+            use(xlink:href='/assets/images/sprite.svg#architect') 
+          h3.cards__title Помощь в покупке агрегата
+          p.cards__text (печи, камина, котла), а также качественной установке на объекте с последующим гарантийным сервисом
+        li.cards__item
+          svg.cards__img
+            use(xlink:href='/assets/images/sprite.svg#review') 
+          h3.cards__title Реальные отзывы клиентов
+          p.cards__text Убедитесь в добросовестности исполнения, прочитав Отзывы клиентов в специальном разделе.
+  section.consultation 
+    .container 
+      .consultation__wrapper
+        h2.consultation__title НЕОБХОДИМА КОНСУЛЬТАЦИЯ?
+        p.consultation__text оставьте заявку или свяжитесь с нами в социальных сетях
+        ul.socials
+          li.socials__item
+            a(href="#")
+              svg.socials__icon
+                use(xlink:href="/assets/images/sprite.svg#vk") 
+          li.socials__item
+            a(href="#")
+              svg.socials__icon
+                use(xlink:href="/assets/images/sprite.svg#telegram") 
+          li.socials__item
+            a(href="#")
+              svg.socials__icon
+                use(xlink:href="/assets/images/sprite.svg#instagram") 
+          li.socials__item
+            a(href="#")
+              svg.socials__icon
+                use(xlink:href="/assets/images/sprite.svg#whatsapp")
+        .form
+          p.form__text 
+            | Для 
+            span.form__text--accent консультации 
+            | заполните форму!
+          p.form__text-descr С Вами свяжутся в ближайшее время
+          form.call-form
+            input.call-form__name(type="text", required minLength='2' name="", placeholder='Ваше имя')
+            input.call-form__phone(type="tel", required minLength='11' name="", placeholder='Ваш телефон')
+            button(type="submit").call-form__btn отправить
+  section.video 
+    .container 
+      .divider
+      h2.title.mobile-title Видео об установке
+      p.video__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      .video__back
+        .video__wrapper
+          iframe.video__link( src="https://www.youtube.com/embed/LDU_Txk06tM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+  section.photo
+    .container 
+      .divider
+      h2.title.mobile-title Фото выполненных работ
+      p.photo__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      ul.photo__gallery
+        li.photo__item 
+          img.photo__img(src="/assets/images/chimney.png", alt="Дымоход", srcset="")
+        li.photo__item 
+          img.photo__img(src="/assets/images/chimney.png", alt="Дымоход", srcset="")
+        li.photo__item 
+          img.photo__img(src="/assets/images/chimney.png", alt="Дымоход", srcset="")
+        li.photo__item 
+          img.photo__img(src="/assets/images/chimney.png", alt="Дымоход", srcset="")
+        li.photo__item 
+          img.photo__img(src="/assets/images/chimney.png", alt="Дымоход", srcset="")
+        li.photo__item 
+          img.photo__img(src="/assets/images/chimney.png", alt="Дымоход", srcset="")
+        li.photo__item 
+          img.photo__img(src="/assets/images/chimney.png", alt="Дымоход", srcset="")
+        li.photo__item 
+          img.photo__img(src="/assets/images/chimney.png", alt="Дымоход", srcset="")

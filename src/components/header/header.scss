@@ -1,0 +1,241 @@
+.header {
+  padding-top: 26px;
+  &__container {
+    max-width: 1845px;
+    padding: 0 30px;
+    margin: 0 auto;
+  }
+  
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.burger {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  &__button {
+    margin-right: 31px;
+  }
+
+  &__icon {
+    width: 56px;
+    height: 56px;
+  }
+
+}
+
+.nav {
+  display: flex;
+
+  &__item {
+    margin-right: 31px;
+  }
+
+  &__link {
+    font-weight: 700;
+    font-size: 16px;
+    color: $colorAqua;
+    transition: border-bottom .3s ease-in-out;
+
+    &:hover {
+      border-bottom: 1px solid $colorAqua;
+    }
+    &:active {
+      color: $colorDarkAqua;
+    }
+  }
+}
+
+.mobile-link {
+  color: $colorAqua;
+  transition: color .3s ease-in-out;
+
+  &__span {
+    color: $colorBlack;
+    font-weight: 700;
+  }
+
+  &:hover {
+    color: $colorRed;
+  }
+  &:active {
+    color: $colorDarkRed;
+  }
+}
+
+.call-request {
+  font-size: 14px;
+  font-weight: 700;
+  color: $colorDarkRed;
+  border-bottom: 1px dashed $colorDarkRed;
+  transition: border-bottom .3s ease;
+
+  &:hover {
+    border-bottom: 1px solid;
+  }
+}
+
+.socials {
+  display: flex;
+
+  &__item:not(:last-child) {
+    margin-right: 12px;
+  }
+
+  &__icon {
+    color: $colorAqua;
+    width: 20px;
+    height: 20px;
+    transition: color .2s ease-in-out;
+
+    &:hover {
+      color: $colorDarkRed;
+    }
+    &:active {
+      color: $colorRed;
+    }
+  }
+}
+
+.actions {
+
+  &__button {
+    border: 1px solid $colorLightGray;
+    border-radius: 100%;
+    width: 56px;
+    height: 56px;
+    transition: border-color .3s ease-in-out;
+
+
+    &:hover {
+      border-color: $colorAqua;
+    }
+    &:active {
+      border-color: $colorDarkAqua;
+    }
+  }
+
+  &__button:not(:last-child) {
+    margin-right: 16px;
+  }
+
+  &__icon {
+    width: 23px;
+    height: 23px;
+  }
+}
+
+@media (max-width: 1585px) {
+  .call-request {
+    display: none;
+  }
+}
+
+@media (max-width: 1415px) {
+  .mobile-link {
+    display: none;
+  }
+
+  .header {
+    .socials {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 1115px) {
+  .header {
+
+    &__wrapper {
+      padding-bottom: 23px;    
+      border-bottom: 1px solid #E5E5E5;
+    }
+
+    &__logo {
+      width: 64px;
+    }
+  
+    &__container {
+      padding: 0 16px;
+    }
+  }
+
+  .burger__nav {
+    display: none;
+  }
+  
+  .burger__nav--active  {
+    display: block;
+    padding: 30px;
+    position: absolute;
+    top: 0px;
+    right: 63px;
+    background-color: $colorWhite;
+    box-shadow: 0px 4px 50px 0px rgba(0, 0, 0, 0.15);
+    z-index: 3;
+
+    .nav {
+      flex-direction: column;
+
+      &__item:not(:last-child) {
+        margin-bottom: 20px;
+        margin-right: 0;
+      }
+    }
+  }
+
+  .burger__button {
+    margin-right: 0;
+  }
+
+  .nav-block {
+    order: 1;
+    margin-right: 0;
+  }
+
+  .actions {
+    margin-left: auto;
+    margin-right: 20px;
+    &__button:not(:last-child) {
+      margin-right: 22px;
+    }
+  }
+}
+
+@media (max-width: 530px) {
+  .search, .like {
+    display: none;
+  }
+
+  .header {
+    padding-top: 11px;
+
+    &__logo {
+      width: 48px;
+    }
+
+    &__wrapper {
+      padding-bottom: 7px;
+    }
+  }
+
+  .burger__icon {
+    width: 44px;
+  }
+
+  .actions {
+    margin-right: 20px;
+
+    &__button {
+      width: 45px;
+      height: 45px;
+    }
+  }
+
+}

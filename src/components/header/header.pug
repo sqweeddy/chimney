@@ -1,0 +1,42 @@
+- const socialIcons = ["/assets/images/sprite.svg#vk", "/assets/images/sprite.svg#telegram", "/assets/images/sprite.svg#instagram", "/assets/images/sprite.svg#whatsapp"]
+- const actionIcons = ["/assets/images/sprite.svg#search", "/assets/images/sprite.svg#telegram", "/assets/images/sprite.svg#instagram", "/assets/images/sprite.svg#whatsapp"]
+
+header.header
+  .header__container
+    .header__wrapper
+      img(src="/assets/images/Logo.png", alt="logo").header__logo
+      .nav-block 
+        .burger
+          button.burger__button 
+            svg.burger__icon 
+              use(xlink:href="/assets/images/sprite.svg#burger")
+          nav.burger__nav
+            ul.nav
+              li.nav__item
+                a.nav__link(href="#")  КАТАЛОГ ТОВАРОВ
+              li.nav__item
+                a.nav__link(href="#")  ДОСТАВКА И ОПЛАТА
+              li.nav__item
+                a.nav__link(href="#")  ЦЕНЫ
+              li.nav__item
+                a.nav__link(href="#")  КОНТАКТЫ
+      a(href="tel:78125092198").mobile-link
+        | + 7 (812) 
+        span.mobile-link__span 509 21 98
+      button.call-request ПЕРЕЗВОНИТЕ МНЕ
+      ul.socials
+        each icon in socialIcons
+          li.socials__item
+            a(href="#")
+              svg.socials__icon
+                use(xlink:href= icon) 
+      .actions 
+        button.actions__button.search
+          svg.actions__icon.search
+            use(xlink:href="/assets/images/sprite.svg#search")
+        button.actions__button.like
+          svg.actions__icon.like
+            use(xlink:href="/assets/images/sprite.svg#like")
+        button.actions__button 
+          svg.actions__icon.cart
+            use(xlink:href="/assets/images/sprite.svg#cart")
